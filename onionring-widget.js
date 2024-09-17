@@ -7,7 +7,7 @@
 
 async function onionRing() {
 
-  const jsonRes = await fetch('https://raw.githubusercontent.com/ChaiaEran/Eggbug-Egglist/main/eggsites.json')
+  const jsonRes = await fetch('https://chaiaeran.github.io/Eggbug-Eggring/eggsites.json')
 
   var sites = await jsonRes.json()
 
