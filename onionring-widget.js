@@ -82,7 +82,7 @@ async function onionRing() {
     <table>
       <tr>
         <td class='webring-prev'><a href='${sites[previousIndex]}'>← previous</a></td>
-        <td class='webring-info'>This site is part of the <img src="https://chaiaeran.neocities.org/onionring/eggring.png" alt="Eggbug Eggring"></br>
+        <td class='webring-info'>This site is part of the <img src="https://chaiaeran.github.io/Eggbug-Eggring/eggring.png" alt="Eggbug Eggring"></br>
         <span class='webring-links'>
           ${randomText}
           ${indexText}
