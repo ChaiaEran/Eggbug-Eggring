@@ -41,13 +41,6 @@ async function onionRing() {
     }
   }
 
-  function randomSite() {
-    otherSites = sites.slice(); //create a copy of the sites list
-    otherSites.splice(thisIndex, 1); //remove the current site so we don't just land on it again
-    randomIndex = Math.floor(Math.random() * otherSites.length);
-    location.href = otherSites[randomIndex];
-  }
-
   //if we didn't find the site in the list, the widget displays a warning instead
   if (thisIndex == null) {
     tag.insertAdjacentHTML('afterbegin', `
@@ -93,6 +86,13 @@ async function onionRing() {
     `);
 
   }
+}
+
+function randomSite() {
+  otherSites = sites.slice(); //create a copy of the sites list
+  otherSites.splice(thisIndex, 1); //remove the current site so we don't just land on it again
+  randomIndex = Math.floor(Math.random() * otherSites.length);
+  location.href = otherSites[randomIndex];
 }
 
 onionRing()
