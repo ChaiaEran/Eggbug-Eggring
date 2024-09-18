@@ -67,7 +67,7 @@ async function onionRing() {
     randomText = ""
     //if you've chosen to include a random button, this builds the link that does that
     if (useRandom) {
-      randomText = `<a href='javascript:void(0)' onclick='randomSite()'>random</a> | `;
+      randomText = `<a href='javascript:void(0)' onclick='randomSite(${sites}, ${thisIndex})'>random</a> | `;
     }
 
     //this is the code that displays the widget - EDIT THIS if you want to change the structure
@@ -88,7 +88,7 @@ async function onionRing() {
   }
 }
 
-function randomSite() {
+function randomSite(sites, thisIndex) {
   otherSites = sites.slice(); //create a copy of the sites list
   otherSites.splice(thisIndex, 1); //remove the current site so we don't just land on it again
   randomIndex = Math.floor(Math.random() * otherSites.length);
