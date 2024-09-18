@@ -64,10 +64,12 @@ async function onionRing() {
       indexText = `<a href='${indexPage}'>index</a> | `;
     }
 
+    let siteStrings = sites.map((string) => `"${string}"`)
+
     randomText = ""
     //if you've chosen to include a random button, this builds the link that does that
     if (useRandom) {
-      randomText = `<a href='javascript:void(0)' onclick='randomSite([${sites}], ${thisIndex})'>random</a> | `;
+      randomText = `<a href='javascript:void(0)' onclick='randomSite([${siteStrings}], ${thisIndex})'>random</a> | `;
     }
 
     //this is the code that displays the widget - EDIT THIS if you want to change the structure
